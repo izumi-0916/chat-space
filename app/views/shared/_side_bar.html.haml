@@ -2,13 +2,13 @@
   .side-bar__user-name
     .top-items
       %p.top-items__name
-        masa
+        = current_user.name
       %ul.item-box
         %li.item-box__icon
           = link_to "#" do
             %i{class: "fa fa-edit icons"}
         %li.item-box__icon  
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             %i{class: "fa fa-cog icons"}
   .side-bar__groups
     .side-bar__groups--name
