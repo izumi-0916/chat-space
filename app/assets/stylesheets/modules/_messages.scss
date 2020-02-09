@@ -16,16 +16,19 @@
   &__groups {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-    padding: 20px 20px 0;
-    &--name {
-      font-size: 15px;
-      color: #ffffff;
-      margin-bottom: 5px;
-    }
-    &--text {
-      font-size: 11px;
-      color: #ffffff;
-      margin-bottom: 40px;
+    padding: 0 20px;
+    .group{
+      box-sizing: border-box;
+      padding: 20px 0 40px;
+      &__name {
+        font-size: 15px;
+        color: #ffffff;
+       margin-bottom: 5px;
+      }
+      &__text {
+        font-size: 11px;
+        color: #ffffff;
+      }
     }
   }
 }

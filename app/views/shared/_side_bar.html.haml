@@ -5,13 +5,16 @@
         = current_user.name
       %ul.item-box
         %li.item-box__icon
-          = link_to "#" do
+          = link_to new_group_path do
             %i{class: "fa fa-edit icons"}
         %li.item-box__icon  
           = link_to edit_user_path(current_user) do
             %i{class: "fa fa-cog icons"}
   .side-bar__groups
-    .side-bar__groups--name
-      techcmp
-    .side-bar__groups--text
-      まだメッセージがありません  
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__text
+            まだメッセージがありません  
